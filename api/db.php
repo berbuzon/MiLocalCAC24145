@@ -1,5 +1,5 @@
 <?php
-$servername = "localhost";
+$servername = "localhost:3307";
 $username = "root";
 $password = "";
 $dbname = "movies_cac";
@@ -9,7 +9,6 @@ try
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     // Configurar PDO para que lance excepciones en caso de error
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    echo "Conexion exitosa....";
 } 
 catch(PDOException $e) 
 {
